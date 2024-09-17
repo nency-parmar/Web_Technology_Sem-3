@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Find Vowel Position
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a=prompt("Enter a Name : ");
+        console.log(a);
+        temp1=a.indexOf('A'||'E'||'I'||'O'||'U'||'a'||'e'||'i'||'o'||'u')
+        temp=a.lastIndexOf('A'||'E'||'I'||'O'||'U'||'a'||'e'||'i'||'o'||'u');
+        if(temp1==0 && temp==a.length-1)
+        {
+            document.write(a.substring(temp1,temp));
+        }
+        
+    </script>
+</body>
+</html>

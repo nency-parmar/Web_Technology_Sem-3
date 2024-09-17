@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Ascending Order
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+    var n=parseInt(prompt("Enter a Size of an Array : "));
+    var a = [];
+    for(var i=0;i<n;i++)
+    {
+        a[i]=parseInt(prompt("Enter Elements in an Array : "+i));
+    }
+
+    a.sort(function(a,b){return a-b});
+    document.write("Array is in Ascending Order : <br/>")
+    for(i=0;i<n;i++)
+    {
+        document.write(a[i]);
+        document.write("<br/>");
+    }
+    </script>
+</body>
+</html>

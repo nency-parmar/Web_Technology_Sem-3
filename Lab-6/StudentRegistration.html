@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Student Registration
+	</title>
+	<style type="text/css">
+		*
+		{
+			box-sizing: border-box;
+		}
+		#page
+		{
+			height: 100vh;
+			border: 1px solid;
+			text-align: center;
+			background-color: #CFD8DC;
+			padding: 5%;
+		}
+		div
+		{
+/*			border: 1px solid white;*/
+			margin-top: 4px;
+		}
+		button
+		{
+			border: 1px solid;
+			width: 100px;
+			margin-left: 70px;
+			font-size: 15px;
+			transition: all 1s;
+			border-radius: 20px;
+			background-color: #969C9F;
+		}
+		button:hover
+		{
+			background-color: #01579B;
+			color: white;
+			transform: scale(1.2);
+			transition: all 1s;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+<form>
+	<div id="page">
+		<h1>Student Registration</h1>
+		<div id="Name">
+			Full Name :
+			<input type="text" placeholder="Enter Your Name" required>
+		</div><br>
+		<div id="name">
+			Email :
+			<input type="pattern" id="email" placeholder="Enter Your Email">
+			<div id="successmail" style="color: green;"></div>
+			<div id="errormail" style="color: #a8324c;"></div>
+		</div><br>
+		<div id="name">
+			Phone Number :
+			<input type="number" id="pNo" placeholder="Enter Your Number">
+			<div id="successpno" style="color: green;"></div>
+			<div id="errorpno" style="color: #a8324c;"></div>
+		</div><br>
+		<div id="name">
+			Address :
+			<textarea cols="30" rows="10" placeholder="Enter Your Current Address" required></textarea>
+		</div><br>
+		<div id="name">
+			Date Of Birth :
+			<input type="date" required>
+		</div><br>
+		<div id="name">
+			Gender :
+			<input type="radio" name="Gender">Male
+			<input type="radio" name="Gender">Female
+		</div><br>
+		<div id="name">
+			University Name :
+			<input type="text" placeholder="Enter Your University Name" required>
+		</div><br>
+
+		<button onclick="valid()">SUBMIT</button>
+	</div>
+</form>
+	<script type="text/javascript">
+		function valid()
+		{
+			mail = document.getElementById("email").value
+			mailRegex =/\s*[a-zA-Z0-9]+\@[a-zA-z]+\.[a-zA-Z]{1,}/;
+
+			if(mailRegex.test(mail))
+			{
+				// document.getElementById("successmail").innerHTML = "Valid E-Mail";
+				document.getElementById("errormail").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errormail").innerHTML = "Please Enter Valid E-Mail I'D";
+				document.getElementById("successmail").innerHTML = "";
+			}
+
+			pno = document.getElementById("pNo").value
+			pnoRegex = /[0-9]{10}/;
+
+			if(pnoRegex.test(pno))
+			{
+				// document.getElementById("successpno").innerHTML = "Valid Enrollment Number.";
+				document.getElementById("errorpno").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errorpno").innerHTML = "Please Enter Valid Phone Number.";
+				document.getElementById("successpno").innerHTML = "";
+			}
+
+
+			// if(pnoRegex.test(pno) && mailRegex.test(mail) && nameRegex.test(name) && required)
+			// {
+           	// 	alert("You are Successfully Filled Your Information.");
+	        // }
+	        // else
+	        // {
+			// 	alert("Invalid Information.");
+	        // }
+		}
+	</script>
+
+</body>
+</html>

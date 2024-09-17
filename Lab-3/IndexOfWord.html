@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Index Of searched Word
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a=prompt("Enter a String : ");
+        var b=prompt("Enter a word to Print Index : ");
+        var n=a.split(" ");
+        for(i=0;i<n.length;i++)
+        {
+            if(n[i]==b)
+            {
+                document.write("Index of Searched Word is : "+i);
+            }
+        }
+    </script>
+</body>
+</html>

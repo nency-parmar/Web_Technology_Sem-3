@@ -1,0 +1,43 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Pop up Box
+	</title>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		var a = parseInt(prompt("Enter 1st Value : "));
+		console.log("1st Value : ",a);
+		var b = parseInt(prompt("Enter 2nd Value : "));
+		console.log("2nd Value : ",b);
+		var c;
+
+		let choice = parseInt(prompt("Sum 1, Sub 2, Mul 3, Div 4"));
+
+		if(choice == 1)
+		{
+			c = a+b;
+		}
+		else if(choice == 2)
+		{
+			c == a-b;
+		}
+		else if(choice == 3)
+		{
+			c == a*b;
+		}	
+		else
+		{
+			c == a/b;
+		}
+		document.write("Answer = ",c);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Armstrong
+	</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var a = parseInt(prompt("Enter a Number : "));
+		console.log(a);
+
+		var temp = a;
+		var sum = 0;
+		var rem = 0;
+
+		while(a != 0)
+		{
+			rem = a%10;
+			sum = sum+(rem*rem*rem);
+			a = parseInt(a/10);
+		}
+		document.write("Sum = ",sum);
+		document.write("<br/>");
+		if(sum == temp)
+		{
+			document.write("Number is Armstrong.");
+		}
+		else 
+		{
+			document.write("Number is Not Armstrong.");
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Form Validation
+	</title>
+	<style type="text/css">
+		*
+		{
+			box-sizing: border-box;
+		}
+		body
+		{
+			height: auto;
+			width: auto;
+			padding: 2%;
+			border: 1px solid;
+		}
+		.page
+		{
+			height: 50%;
+			width: 40%;
+			border: 1px solid;
+			padding: 1%;
+			margin-left: 350px;
+			padding-left: 160px;
+			font-size: 20px;
+		}
+		h2
+		{
+			margin-left: 35%;
+			font-size: 40px;
+		}
+		button
+		{
+			border: 1px solid;
+			width: 100px;
+			margin-left: 70px;
+			font-size: 20px;
+			transition: all 1s;
+		}
+		button:hover
+		{
+			background-color: green;
+			color: white;
+			transform: scale(1.1);
+			transition: all 1s;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>Registration Form</h2>
+		<div class="page">
+			<label>UserName : </label>
+			<input type="text" id="userName">
+			<div id="successMsg" style="color: green;"></div>
+			<div id="errorMsg" style="color: red;"></div>
+			<br/>
+			<label>Password : </label>
+			<input type="password" id="password">
+			<div id="succesPas" style="color: green;"></div>
+			<div id="errorPas" style="color: red;"></div>
+			<br/>
+			<label>Re-Password : </label>
+			<input type="password" id="repassword">
+			<div id="successrepas" style="color: green;"></div>
+			<div id="errorrepas" style="color: red;"></div>
+			<br/>
+			<label>Age : </label>
+			<input type="text" id="age">	
+			<div id="successage" style="color: green;"></div>
+			<div id="errorage" style="color: red;"></div>
+			<br/>
+			<label>Enrollment No. : </label>
+			<input type="number" id="enNo">
+			<div id="successenno" style="color: green;"></div>
+			<div id="errorenno" style="color: red;"></div>
+			<br/>
+			<label>E-mail : </label>
+			<input type="pattern" id="email">
+			<div id="successmail" style="color: green;"></div>
+			<div id="errormail" style="color: red;"></div>
+			<br/>
+
+			<button onclick="validation()">Submit</button>
+		</div>
+
+	<script type="text/javascript">
+		function validation()
+		{
+			user = document.getElementById("userName").value;
+			userRegex = /^(?=.*[A-za-z])(?=.*\d)[A-Za-z\d]{8,12}$/
+
+			if(userRegex.test(user))
+			{
+				// document.getElementById("successMsg").innerHTML = "Valid UserName";
+				document.getElementById("errorMsg").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errorMsg").innerHTML = "Username must be Filled out";
+				document.getElementById("successMsg").innerHTML = "";
+			}
+
+			pass = document.getElementById("password").value
+			passRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+			if(passRegex.test(pass))
+			{
+				// document.getElementById("succesPas").innerHTML = "Valid PassWord";
+				document.getElementById("errorPas").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errorPas").innerHTML = "Password Should Contain atleast one number and one special character.";
+				document.getElementById("succesPas").innerHTML = "";
+			}
+			pasS = document.getElementById("repassword").value
+
+			if(pass == pasS)
+			{
+				// document.getElementById("successrepas").innerHTML = "Success PassWord.";
+				document.getElementById("errorrepas").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errorrepas").innerHTML = "Please Enter Correct PassWord";
+				document.getElementById("successrepas").innerHTML = "";
+			}
+
+			age = document.getElementById("age").value
+			ageRegex = /^\S[0-9]{0,3}$/;
+
+			if(ageRegex.test(age))
+			{
+				// document.getElementById("successage").innerHTML = "Valid Age";
+				document.getElementById("errorage").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errorage").innerHTML = "Please Enter Valid Age";
+				document.getElementById("successage").innerHTML = "";
+			}
+
+			enno = document.getElementById("enNo").value
+			enNoRegex = /[0-9]{11}/;
+
+			if(enNoRegex.test(enno))
+			{
+				// document.getElementById("successenno").innerHTML = "Valid Enrollment Number.";
+				document.getElementById("errorenno").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errorenno").innerHTML = "Please Enter Valid Enrollment Number.";
+				document.getElementById("successenno").innerHTML = "";
+			}
+
+			mail = document.getElementById("email").value
+			mailRegex =/\s*[a-zA-Z0-9]+\@[a-zA-z]+\.[a-zA-Z]{1,}/;
+
+			if(mailRegex.test(mail))
+			{
+				// document.getElementById("successmail").innerHTML = "Valid E-Mail";
+				document.getElementById("errormail").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("errormail").innerHTML = "Please Enter Valid E-Mail I'D";
+				document.getElementById("successmail").innerHTML = "";
+			}
+
+			if(userRegex.test(user) && passRegex.test(pass) && pass == pasS && ageRegex.test(age) && enNoRegex.test(enno) && mailRegex.test(mail))
+			{
+           		alert("You are Successfully Filled Your Information.");
+	        }
+	        else
+	        {
+				alert("Invalid fomate Entered:");
+	        }
+			}
+	</script>
+
+</body>
+</html>

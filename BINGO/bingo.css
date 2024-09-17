@@ -1,0 +1,121 @@
+body { 
+	font-family: Arial, sans-serif; 
+	background-color: #d8f3dc; 
+	/* Light green background color */
+	margin: 0; 
+	padding: 0; 
+} 
+
+.bingo-container { 
+	text-align: center; 
+	padding: 20px; 
+} 
+
+h1 { 
+	color: #379683; 
+	/* Dark green text color */
+} 
+
+.player-cards { 
+	display: flex; 
+	justify-content: center; 
+	gap: 20px; 
+	margin-top: 20px; 
+} 
+
+.player-card { 
+	background-color: #fff; 
+	padding: 10px; 
+	border-radius: 5px; 
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+	display: grid; 
+	grid-template-columns: repeat(5, 1fr); 
+	gap: 5px; 
+} 
+
+.player-card h2 { 
+	color: #379683; 
+	/* Dark green text color */
+} 
+
+.controls { 
+	margin-top: 20px; 
+} 
+
+button { 
+	background-color: #379683; 
+	/* Dark green button background color */
+	color: white; 
+	border: none; 
+	padding: 10px 20px; 
+	border-radius: 5px; 
+	cursor: pointer; 
+	font-weight: bold; 
+} 
+
+button:disabled { 
+	background-color: #ccc; 
+	cursor: not-allowed; 
+} 
+
+.input-container { 
+	margin-top: 10px; 
+} 
+
+label { 
+	font-weight: bold; 
+	color: #379683; 
+	/* Dark green text color */
+} 
+
+#numberInput { 
+	padding: 5px; 
+	margin-right: 10px; 
+} 
+
+#turnDisplay { 
+	font-weight: bold; 
+	color: #ff5e78; 
+	/* Light red text color */
+} 
+
+/* Style individual numbers in the player cards */
+.player-card div { 
+	background-color: #379683; 
+	/* Dark green number background color */
+	color: white; 
+	width: 30px; 
+	height: 30px; 
+	border-radius: 50%; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	font-weight: bold; 
+} 
+
+.player-card div.marked { 
+	background-color: #ff5e78; 
+	/* Light red for marked numbers */
+} 
+
+@keyframes celebrate { 
+
+	0%, 
+	100% { 
+		transform: translateY(0); 
+	} 
+
+	50% { 
+		transform: translateY(-20px); 
+	} 
+} 
+
+#winDisplay { 
+	font-weight: bold; 
+	font-size: large; 
+	text-decoration: underline; 
+	color: #098900de; 
+	/* Light red text color */
+	margin-top: 30px; 
+	animation: celebrate 1s ease-in-out infinite; 
+}

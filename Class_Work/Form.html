@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Student Form
+	</title>
+	<style type="text/css">
+		body
+		{
+			background-color: rgb(124, 210, 244);
+			margin-right: 40px;
+		}
+		.page
+		{
+			height: 100%;
+			width: 100%;
+			padding: 1%;
+			font-size: 20px;
+			padding-right: 2%;
+		}
+		h1
+		{
+			border-bottom: 2px solid white;
+			text-align: center;
+
+		}
+		.box
+		{
+			width: 100%;
+			height: 4vh;
+			padding-left: 1%;
+			border-radius: 5px 5px;
+		}
+		button
+		{
+			height: 5vh;
+			background-color: green;
+			color: white;
+			transition: all 2s;
+			font-size: 20px;
+		}
+		button:hover
+		{
+			transform: scale(1.3);
+			transition: all 2s;
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<form>
+
+	<h1>Student Registeration Form</h1>
+	<div class="page">
+		<div>
+			Firstname
+		</div>
+		<div >
+			<input class="box" type="name" name="" placeholder="Firstname">
+		</div>
+		<div>
+			Middlename :
+		</div>
+		<div>
+			<input class="box" type="name" name="" placeholder="Middlename">
+		</div>
+		<div>
+			Lastname :
+		</div>
+		<div>
+			<input class="box" type="name" name="" placeholder="Lastname">
+		</div>
+		<br>
+		<div>
+			Course :
+			<select >
+ 					<option>Course</option>
+					<option>B.Tech</option>
+					<option>B.Sc</option>
+					<option>B.E.</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			Gender :
+		</div>
+		<div>
+			<input type="radio" name="Male">Male
+			<input type="radio" name="Female">Female
+			<input type="radio" name="Other">Other
+		</div>
+		<br>	
+		<div>
+			Number :
+		</div>
+		<div>
+			<input class="box" type="text" pattern="[0-9]{10}" value="+91">
+		</div>
+		<br>
+		<div>
+			<input class="box" type="text" pattern="[0-9]{10}" placeholder="Phone No.">
+		</div>
+		<br>
+		<div>
+			Current Address : 
+		</div>
+		<div>
+			<textarea class="box" cols="180" style="height: 8vh;" placeholder="Current Address"></textarea>
+		</div>
+		<br>
+		<div>
+			Email :
+		</div>
+		<div>
+			<input class="box" type="text" name="" placeholder="Enter Email">
+		</div>
+		<br>
+		<div>
+			Password :
+		</div>
+		<div>
+			<input class="box" type="password" name="" placeholder="Enter Password">
+		</div>
+		<br>
+		<div>
+			Re-type Password :
+		</div>
+		<div>
+			<input class="box" type="password" name="" placeholder="Retype Password">
+		</div>
+		<br>
+		<button class="box">Register</button>
+	</div>
+
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Number in Words</title>
+</head>
+<body>
+   <script type="text/javascript">
+	    var a=parseInt(prompt("Enter a Number : "))
+	    document.write(a);
+	    document.write("<br/>");
+	    if(isNaN(a))
+	    {
+	        document.write("Not a Number");
+	    }
+	    else
+	    {
+	        var units=["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
+	        var teens=["Ten","Eleven","Tweleve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
+	        var tens=["Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+	        var result=" ";
+	        if(a>=100)
+	        {
+	            result=result+units[Math.floor(a/100)]+" Hundred "
+	            a=a%100;
+	        }
+	        else if(a>=20)
+	        {
+	            result=result+tens[Math.floor(a/10)-2];
+	            a=a%10;
+	        }
+	        else if(a>=10 && a<20)
+	        {
+	            result=result+teens[Math.floor(a/10)+1];
+	            a=a%10;
+	        }
+	        else if(a<10)
+	        {
+	            result=result+units[a];
+	        }
+	        document.write(result);
+	    }
+   </script> 
+</body>
+</html>

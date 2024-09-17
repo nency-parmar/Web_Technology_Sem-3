@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Destructur Of Array & Object
+	</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Destructure Of Array...
+
+		var arr = [101,"abc",23010101193,"abc@abc.com"];
+
+		const [rNo,Name,eNo,eMail] =  arr;
+
+		console.log("Roll No : "+rNo);
+
+		//Destructure Of Object...
+
+		var student = {
+			name : "xyz",
+			rNo : 101,
+			eNo : 23010101193,
+			city : "rajkot"
+		}
+
+		const {name} = student;
+
+		console.log("Name : "+name);
+	</script>
+
+</body>
+</html>

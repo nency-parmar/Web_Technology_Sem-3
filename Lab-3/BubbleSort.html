@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Bubble Short
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+        var n=parseInt(prompt("Enter a Size of an Array : "));
+        var array=[];
+        for(var i=0;i<n;i++)
+        {
+            array[i]=parseInt(prompt("Enter Elements in an Array : "+i ));
+        }
+        for(var i=0;i<n;i++)
+        {
+            for(var j=0;j<n-1;j++)
+            {
+                if(array[j] > array[j+1])
+                {
+                    var temp = array[j+1];
+                    array[j+1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        document.write("Array in Order : <br/>"+array);
+    </script>
+</body>
+</html>

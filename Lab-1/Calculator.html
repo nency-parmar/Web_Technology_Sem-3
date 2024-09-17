@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        a=prompt("Enter your 1st number : ");
+        b=prompt("Enter your 2nd number : ");
+        c=prompt("Enter + for add,-for sub,* for multi,/ for div");
+        var ans=0;
+        switch(c){
+            case "+":
+            ans=parseInt(a)+parseInt(b);
+            break;
+            case "-":
+            ans=parseInt(a)-parseInt(b);
+            break;
+            case "*":
+            ans=parseInt(a)*parseInt(b);
+            break;
+            case "/":
+            ans=parseInt(a)/parseInt(b);
+            break;
+            default:
+            break;
+        }
+        document.write("Answer = ",ans);
+    </script>
+</body>
+</html>

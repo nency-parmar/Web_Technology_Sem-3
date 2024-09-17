@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Callback
+	</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function main(a) 
+		{
+			console.log("Main Function Called.");
+			a();
+		}
+
+		main(function(){
+			console.log("Callback.")
+		})
+	</script>
+
+</body>
+</html>

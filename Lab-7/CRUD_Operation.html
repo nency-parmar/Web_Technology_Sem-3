@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		CRUD
+	</title>
+	<style type="text/css">
+		input
+		{
+			height: 30px;
+			width: 200px;
+			border: 1px solid;
+			border-radius: 10px;
+		}
+		button
+		{
+			height: 30px;
+			width: 100px;
+			border: 1px solid;
+			border-radius: 20px;
+		}
+		button:hover
+		{
+			background-color: green;
+			color: white;
+		}
+		#errMsg
+		{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="text" onfocus="reset()" id="name" placeholder="Enter Your Text Here">
+	<button onclick="add()">ADD</button><br><br>
+	<span id="errMsg">
+			
+	</span><br>
+	<label>Enter Index For Update Value : </label>
+	<input type="number" id="index" placeholder="Enter Index">
+	<label>Enter New Value For Update : </label>
+	<input type="text" id="Val" placeholder="Enter Value For Update">
+	<button onclick="updateBtn()">UPDATE</button>
+	<div id="output"></div>
+
+	<script type="text/javascript">
+		const arr = [];
+		idToUpdate = -1;
+		str=''
+		const add = () => {
+			var name = document.getElementById('name');
+
+			if(name.value == ' ')
+			{
+				name.style.border = "2px solid red"
+				document.getElementById('errMsg').innerHTML = "Please Enter Name"
+			}
+			else
+			{
+				if(idToUpdate>=0)
+				{
+					arr[idToUpdate] = name.value;
+				}
+				else
+				{
+					arr.push(name.value);
+				}
+				name.value = " ";
+				display();
+			}
+		}
+
+		function reset()
+		{
+			name = document.getElementById('name')
+			name.style.border = "2px solid black"
+			document.getElementById('errMsg').innerHTML = ""
+		}
+
+		function display()
+		{	
+			a = document.getElementById('output');
+			aString = "<table border='1'>";
+			a.innerHTML = " ";
+			for(i=0;i<arr.length;i++)
+			{
+				aString += "<tr>";
+				aString += "<td>";
+				aString += arr[i];
+				aString += "</td>";
+				aString += "<td>";
+				aString += "<button onclick='deleteFun("+i+")''style='border: 1px solid; height: 4vh; border-radius: 25%; background-color: red;'>DELETE</button>"
+				aString += "</td>";
+				aString += "</tr>"
+				
+			}
+			aString += "</table>";
+			a.innerHTML = aString;
+
+		}
+
+		function updateBtn()
+		{
+			Index = document.getElementById('index').value;
+			newVal = document.getElementById('Val');
+			if(Index>=0 && Index<arr.length)
+			{
+				arr[index.value] = newVal.value;
+			}
+			else
+			{
+				alert("Invalid Index...Please Enter Valid Index.")
+			}
+			display();
+		}
+
+		function deleteFun(index)
+		{
+			ans = confirm("Are You Sure Want to Delete?")
+			if(ans)
+			{
+				arr.splice(index,1);
+				display();
+			}
+		}
+
+	</script>
+
+</body>
+</html>

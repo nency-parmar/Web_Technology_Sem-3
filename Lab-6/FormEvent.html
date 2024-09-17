@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Form Event
+  </title>
+</head>
+<body>
+
+    <select id="mySelect" onchange="myFunction()">
+      <option disabled selected>Car</option>
+      <option value="Audi">Audi
+      <option value="BMW">BMW
+      <option value="Mercedes">Mercedes
+      <option value="Lamborgini">Lamborgini
+    </select>
+    <div id="demo"></div>
+    <script>
+    function myFunction() 
+    {
+      a = document.getElementById("mySelect").value;
+      document.getElementById("demo").innerHTML = "You Selected : "+a;
+    }
+</script>
+
+</body>
+</html>
