@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="page">
+        <h1>Tic Tac Toe</h1>
+        <div class="main">
+            <div class="chhose">
+            </div>
+            <div class="container">
+                <div class="first">
+                    <!-- <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/monochrome-tic-tac-toe-game-J3zoMaD-600.jpg" /> -->
+                     <img src="https://static.vecteezy.com/system/resources/previews/002/423/122/non_2x/tic-tac-toe-icon-illustration-free-vector.jpg" style="width: 400px; height: 56vh; transform: rotate(60deg); margin-top: 25px;" />
+                </div>
+                <div class="sec">
+                    <div class="row">
+                        <div onclick="changeColor('0')" class="box" id="0">
+
+                        </div>
+                        <div onclick="changeColor('1')" class="box" id="1">
+
+                        </div>
+                        <div onclick="changeColor('2')" class="box" id="2">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div onclick="changeColor('3')" class="box" id="3">
+
+                        </div>
+                        <div onclick="changeColor('4')" class="box" id="4">
+
+                        </div>
+                        <div onclick="changeColor('5')" class="box" id="5">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div onclick="changeColor('6')" class="box" id="6">
+
+                        </div>
+                        <div onclick="changeColor('7')" class="box" id="7">
+
+                        </div>
+                        <div onclick="changeColor('8')" class="box" id="8">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="third">
+                <img src="https://static.vecteezy.com/system/resources/previews/002/423/122/non_2x/tic-tac-toe-icon-illustration-free-vector.jpg" style="width: 400px; height: 55vh; transform: rotate(120deg); margin-left: 65px; margin-top: 200px;" />
+                <!-- <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/monochrome-tic-tac-toe-game-J3zoMaD-600.jpg" style="transform: rotate(30deg);" /> -->
+                </div>
+            </div>
+        </div>
+        <button id="reset" onclick="restartGame()">Restart Game</button>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
